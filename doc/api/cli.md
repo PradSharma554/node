@@ -1787,6 +1787,19 @@ Disable [runtime allocation of executable memory][jitless]. This may be
 required on some platforms for security reasons. It can also reduce attack
 surface on other platforms, but the performance impact may be severe.
 
+### `--no-maglev`
+
+<!-- YAML
+added: REPLACEME
+-->
+
+> Stability: 1 - Experimental. This flag is inherited from V8 and is subject to
+> change upstream.
+
+Disable V8's Maglev optimizing compiler. This can be useful as a workaround
+for Maglev-related crashes on certain platforms. This flag can be set via the
+[`NODE_OPTIONS`][] environment variable.
+
 ### `--localstorage-file=file`
 
 <!-- YAML
@@ -3743,6 +3756,7 @@ V8 options that are allowed are:
 * `--expose-gc`
 * `--interpreted-frames-native-stack`
 * `--jitless`
+* `--no-maglev`
 * `--max-heap-size`
 * `--max-old-space-size`
 * `--max-semi-space-size`
